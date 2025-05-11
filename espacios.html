@@ -43,7 +43,7 @@
     <nav class="bg-white shadow-md fixed w-full z-50">
         <div class="container mx-auto px-4 py-3">
             <div class="flex justify-between items-center">
-                <a href="index.html" class="text-2xl font-serif font-bold text-primary">MultiEspacio</a>
+                <a href="index.html" class="text-2xl font-serif font-bold text-primary pr-8">MultiEspacio</a>
                 
                 <!-- Desktop Navigation -->
                 <div class="hidden md:flex space-x-8">
@@ -435,9 +435,11 @@
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
         
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
     </script>
 </body>
 </html>
